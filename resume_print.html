@@ -94,15 +94,17 @@
       <a href="mailto:hirevince@finalatomicbuster.net">hirevince@finalatomicbuster.net</a>
     </div>
 
+    <h2>Summary</h2>
+    <p style="font-size:10.5pt">Software architect leading public-health surveillance platforms for state governments in regulated environments, built around EpiTrax, an open-source, GNU-licensed disease surveillance system. Hands-on across Java, React/TypeScript, and PostgreSQL. Former network engineer, comfortable picking up deployment and infrastructure work as projects need it. Mentor junior engineers and teach across engineering, product, and the EpiTrax consortium through one-on-ones, open office hours, and technical talks.</p>
+
     <h2>Skills</h2>
     <div class="skills-grid">
-      <p><strong>Languages:</strong> Java, Kotlin, JavaScript, TypeScript, Rust, PHP</p>
-      <p><strong>Frontend:</strong> React, Vite, GWT, PrimeFaces, Material UI, Tailwind</p>
-      <p><strong>Backend:</strong> Quarkus, Jakarta EE, Spring Boot, JDBI</p>
-      <p><strong>Databases:</strong> PostgreSQL, MySQL</p>
-      <p><strong>Tools:</strong> GitHub Actions, BridgeLink/Mirth Connect, Flyway</p>
-      <p><strong>Cloud:</strong> AWS (in progress)</p>
-      <p><strong>AI Tools:</strong> OpenCode, Claude Code, Claude Opus (custom agents and skills)</p>
+      <p><strong>Languages:</strong> Java, Kotlin, TypeScript/JavaScript, Python, PHP, SQL</p>
+      <p><strong>Backend:</strong> Quarkus, Jakarta EE, Spring Boot</p>
+      <p><strong>Frontend:</strong> React, Vite, Tailwind CSS, Material UI, HTML/CSS</p>
+      <p><strong>Data and integration:</strong> PostgreSQL, Flyway, BridgeLink (HL7/FHIR), BigQuery, Apache Superset</p>
+      <p><strong>AI tools:</strong> OpenCode, Claude Code</p>
+      <p><strong>Deployment and operations:</strong> Docker, AWS (ECS, Fargate), S3-compatible storage, Kubernetes (kubectl, Kustomize), GitHub Actions, Linux, networking (IPv6)</p>
     </div>
 
     <h2>Experience</h2>
@@ -112,13 +114,14 @@
       <span class="job-dates">April 2023 to Present</span>
     </div>
     <ul>
-      <li>Modernizing EpiTrax — a Jakarta EE/PrimeFaces monolith — into a horizontally scalable React/TypeScript/Vite frontend on a Quarkus backend, significantly improving performance over the legacy system; using an AI-assisted agentic workflow (OpenCode with Claude Opus, including custom-built agents and skills) to accelerate delivery.</li>
-      <li>Maintain and extend EpiTrax, a Jakarta EE/PrimeFaces monolith, alongside supporting Java (Quarkus/JDBI) and PHP applications sharing a PostgreSQL database with Flyway-managed migrations.</li>
-      <li>Designed and developed a proof-of-concept genomics visualization toolkit for disease outbreak tracking using React/TypeScript/Vite and Quarkus, helping win a new client contract and now leading the project into active development.</li>
-      <li>Set up BridgeLink (an open-source Mirth Connect fork) to handle HL7/FHIR message routing between clinical systems, state health departments, and the CDC.</li>
-      <li>Built and maintain CI/CD pipelines with GitHub Actions for multiple statewide client deployments.</li>
-      <li>Own the technical roadmap, drive security improvements, and mentor a distributed engineering team supporting public health clients across multiple states.</li>
-      <li>Support RFP responses by writing technical documentation, contributing to presentations, and performing gap analysis to identify and address missing capabilities.</li>
+      <li>Lead application architect for the California Department of Public Health (CDPH) Future Disease Surveillance System (FDSS), a large contract the team won to replace CalREDIE with EpiTrax (open-source, GNU-licensed), and for platforms in other states. Own the technical roadmap and security improvements.</li>
+      <li>Partner directly with state public health clients while staying hands-on in the code: build features and fixes across EpiTrax and supporting Java and PHP applications, and set up BridgeLink (an HL7/FHIR integration engine) to route messages between clinical systems, state health departments, and the CDC.</li>
+      <li>Originated and led a genomics platform for outbreak investigation after a third-party vendor's collapse left a state public health client without a solution: proposed that Deloitte build it, estimated the effort and cost, wrote the technical response, and won a roughly $1.3M contract. The platform combines EpiTrax genomic data with public NCBI data in Google BigQuery and Apache Superset, with a custom phylogenetic tree component (React/TypeScript, Quarkus) and a sandbox I designed for running client-supplied Python reporting jobs, with network access restricted to a single S3 bucket, prototyped with Docker and S3-compatible storage. Intended for resale to other public-health clients.</li>
+      <li>Review and merge code across multiple state public-health engagements. On the FDSS project, a multi-million-dollar contract, directly lead 3 onshore engineers and set design and implementation direction for an offshore team of about 8, owning each sprint's delivery. Contribute technical work toward having Deloitte's EpiTrax fork, which adds significant features beyond the community version, adopted as the consortium's version (in progress).</li>
+      <li>Architected and built a stateless Quarkus/React re-architecture of EpiTrax, replacing a stateful WildFly/JSF monolith so capacity scales horizontally by adding identical container instances. Load tests on identical hardware showed 84x read throughput, 87x lower latency, 2-3x less memory, and 95% fewer database round-trips.</li>
+      <li>Designed and built a multi-agent AI development workflow (OpenCode with Claude, custom agents and skills) that drives the EpiTrax migration through plan, implement, review, and audit stages. Guardrails include least-privilege agent permissions, human approval before writes and pushes, data-fidelity audits against legacy behavior, and mutation testing, so AI-generated code is verified instead of trusted.</li>
+      <li>Package and deploy the applications I work on for statewide client environments: Dockerfiles and ECS service definitions for the move from self-managed VMs to ECS on Fargate, GitHub Actions test pipelines, and conversion of cron-driven jobs into on-demand container tasks.</li>
+      <li>Mentor junior engineers in weekly one-on-ones and lead biweekly technical all-hands meetings for the engineering and product teams.</li>
     </ul>
 
     <div class="job-header">
@@ -126,8 +129,7 @@
       <span class="job-dates">August 2022 to Present</span>
     </div>
     <ul>
-      <li>Converted GeoJSON route data from BikeHopper's routing API into Garmin-compatible .fit files for turn-by-turn navigation on cycling computers, including debugging and fixing a coordinate encoding issue.</li>
-      <li>Upgraded the frontend from Tailwind CSS 3 to 4.</li>
+      <li>Contribute to an open-source bike-routing app, including Garmin .fit route export for cycling computers and a Tailwind CSS 3 to 4 upgrade.</li>
     </ul>
 
     <div class="job-header">
@@ -135,8 +137,7 @@
       <span class="job-dates">June 2021 to August 2022</span>
     </div>
     <ul>
-      <li>Developed frontend features in React JS with Material UI for a heavily used SaaS application and contributed to a Spring Boot backend, providing peer code reviews throughout.</li>
-      <li>Modernized legacy code by migrating styling to Tailwind and converting class components to functional ones with hooks.</li>
+      <li>Developed frontend features in React with Material UI for a heavily used SaaS application, contributed to a Spring Boot backend, gave peer code reviews, and modernized legacy code (Tailwind migration, class components to hooks).</li>
     </ul>
 
     <div class="job-header">
@@ -155,19 +156,11 @@
       <span class="job-dates">2006 to 2010</span>
     </div>
     <ul>
-      <li>Authored IPv6 Network Protection Device test specifications for U.S. Government NIST USGv6 program.</li>
-      <li>Designed ICSA's internal IPv6 testing program and wrote software tools for evaluation.</li>
+      <li>Authored IPv6 test specifications for the U.S. Government NIST USGv6 program and designed ICSA's internal IPv6 testing program, including evaluation tools.</li>
       <li>Tested network protection devices, worked with vendors to resolve violations, and published findings publicly.</li>
     </ul>
 
     <blockquote>Earlier roles include network engineering, security, and wireless systems for high-profile projects, including supporting press coverage during U.S. Presidential campaigns; details available upon request.</blockquote>
-
-    <h2>Published Works</h2>
-    <ul class="pubs">
-      <li>Konh, B., H.H. Lee, V.P. Martin, V. Zhao, P. Hutapea. 2015a. "Robotic Needling System for Brachytherapy Procedure." <em>International Conference on Automation, Cognitive Science, Optics, Micro ElectroMechanical System, and Information Technology</em>, IEEE.</li>
-      <li>Konh, B., H. Lee, H.H. Lee, V. Zhao, V. Martin, P. Hutapea. 2015b. "Design, Development and Evaluation of a Two Way Actuated Steerable Needle." <em>ASME Smart Materials, Adaptive Structures and Intelligent Systems</em>, IEEE.</li>
-      <li>Zhao, V., H.H. Lee, V.P. Martin, B. Konh, P. Hutapea. 2015. "Nitinol Based Flexible Smart Needle Design." <em>Biomedical Engineering Conference (NEBEC), 41st Annual Northeast</em>, IEEE.</li>
-    </ul>
 
     <h2>Education</h2>
     <p><strong>Temple University</strong>, Philadelphia, PA &nbsp;·&nbsp; 2010–2015 &nbsp;·&nbsp; B.S. Electrical Engineering (Bio-Electrical Concentration)</p>
