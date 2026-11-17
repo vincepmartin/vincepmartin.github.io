@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vincent Martin - Resume</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+
+      body {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-size: 11pt;
+        line-height: 1.5;
+        color: #111;
+        max-width: 750px;
+        margin: 0 auto;
+        padding: 40px 40px;
+      }
+
+      h1 {
+        font-size: 22pt;
+        font-weight: bold;
+        letter-spacing: 0.02em;
+      }
+
+      .contact {
+        font-size: 10pt;
+        color: #444;
+        margin-top: 4px;
+        margin-bottom: 18px;
+      }
+
+      .contact a { color: #444; text-decoration: none; }
+
+      h2 {
+        font-size: 12pt;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        border-bottom: 1px solid #aaa;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        padding-bottom: 2px;
+      }
+
+      .skills-grid p {
+        font-size: 10.5pt;
+        margin-bottom: 3px;
+      }
+
+      .job-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 4px;
+      }
+
+      .job-title { font-weight: bold; font-size: 11pt; }
+      .job-dates { font-size: 10pt; color: #555; white-space: nowrap; }
+
+      ul {
+        margin-left: 18px;
+        margin-bottom: 12px;
+      }
+
+      li {
+        margin-bottom: 3px;
+        font-size: 10.5pt;
+      }
+
+      .bikehopper a { color: #111; }
+
+      blockquote {
+        font-style: italic;
+        color: #555;
+        font-size: 10pt;
+        margin: 8px 0 12px 0;
+        padding-left: 12px;
+        border-left: 2px solid #ccc;
+      }
+
+      .pubs li { margin-bottom: 8px; font-size: 10pt; }
+
+      @media print {
+        body { padding: 30px 40px; }
+        a { color: inherit; text-decoration: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Vincent Martin</h1>
+    <div class="contact">
+      Software Architect &nbsp;·&nbsp; San Francisco, CA &nbsp;·&nbsp;
+      <a href="mailto:hirevince@finalatomicbuster.net">hirevince@finalatomicbuster.net</a>
+    </div>
+
+    <h2>Summary</h2>
+    <p style="font-size:10.5pt">Software architect and technical lead for public-health surveillance platforms built on EpiTrax, an open-source, GNU-licensed system used by state governments in regulated environments. Hands-on from Java and React through deployment, with a computer security and networking background, and a habit of mentoring and teaching across the team.</p>
+
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <p><strong>Languages:</strong> Java, Kotlin, TypeScript/JavaScript, Python, PHP, SQL</p>
+      <p><strong>Backend:</strong> Quarkus, Jakarta EE, Spring Boot, Express.js</p>
+      <p><strong>Frontend:</strong> React, Vite, Tailwind CSS, Material UI, HTML/CSS</p>
+      <p><strong>Data and integration:</strong> PostgreSQL, Flyway, BridgeLink (HL7/FHIR), BigQuery, Apache Superset</p>
+      <p><strong>AI development:</strong> Agent orchestration, skill creation, legacy modernization (Claude Code, OpenCode)</p>
+      <p><strong>Deployment and operations:</strong> Docker, AWS (ECS, Fargate), S3-compatible storage, Kubernetes (kubectl, Kustomize), GitHub Actions, Linux, networking (IPv6)</p>
+    </div>
+
+    <h2>Experience</h2>
+
+    <div class="job-header">
+      <span class="job-title">Software Architect, Deloitte (Formerly End Point Dev)</span>
+      <span class="job-dates">April 2023 to Present</span>
+    </div>
+    <ul>
+      <li>Lead application architect for the California Department of Public Health (CDPH) Future Disease Surveillance System (FDSS), a large contract the team won to replace CalREDIE with EpiTrax, and for platforms in other states. Own the technical roadmap and security improvements.</li>
+      <li>Review and merge code across multiple state public-health engagements. On the FDSS project, a multi-million-dollar contract, directly lead 3 onshore engineers and set design and implementation direction for an offshore team of about 8, owning each sprint's delivery. Contribute technical work toward having Deloitte's EpiTrax fork, which adds significant features beyond the community version, adopted as the consortium's version (in progress). Mentor junior engineers in weekly one-on-ones.</li>
+      <li>Originated and led a genomics platform for outbreak investigation after a third-party vendor's collapse left a state public health client without a solution: proposed that Deloitte build it, estimated the effort and cost, wrote the technical response, and won a roughly $1.3M contract. The platform combines EpiTrax genomic data with public NCBI data in BigQuery and Apache Superset, with a custom phylogenetic tree component (React/TypeScript, Quarkus) and a sandbox I designed for running client-supplied Python reporting jobs, with network access restricted to a single S3 bucket, prototyped with Docker and S3-compatible storage.</li>
+      <li>Architect and build a stateless Quarkus/React re-architecture of a legacy stateful monolith so capacity scales horizontally by adding identical container instances. Load tests on identical hardware showed 84x read throughput, 87x lower latency, 2-3x less memory, and 95% fewer database round-trips.</li>
+      <li>Designed and built a multi-agent AI development workflow (OpenCode with Claude, custom agents and skills) that moves each change through plan, implement, review, and audit stages. Guardrails include least-privilege permissions, human approval before writes, data-fidelity audits against legacy behavior, and mutation testing, so AI-generated code is verified instead of trusted.</li>
+      <li>Stay hands-on with state clients: build features and fixes across EpiTrax and supporting Java and PHP applications, set up BridgeLink for HL7/FHIR message routing, and containerize applications for the move from self-managed VMs to ECS on Fargate.</li>
+    </ul>
+
+    <div class="job-header">
+      <span class="job-title bikehopper"><a href="https://bikehopper.org">BikeHopper</a> (Volunteer, Open Source Contributor)</span>
+      <span class="job-dates">August 2022 to Present</span>
+    </div>
+    <ul>
+      <li>Contribute to an open-source bike-routing app, including Garmin .fit route export for cycling computers and a Tailwind CSS 3 to 4 upgrade.</li>
+    </ul>
+
+    <div class="job-header">
+      <span class="job-title">Senior Software Engineer, Tekmetric</span>
+      <span class="job-dates">June 2021 to August 2022</span>
+    </div>
+    <ul>
+      <li>Developed frontend features in React with Material UI for a heavily used SaaS application, contributed to a Spring Boot backend, gave peer code reviews, and modernized legacy code (Tailwind migration, class components to hooks).</li>
+    </ul>
+
+    <div class="job-header">
+      <span class="job-title">Senior Software Engineer, FedNat</span>
+      <span class="job-dates">July 2015 to May 2021</span>
+    </div>
+    <ul>
+      <li>Built and maintained an agent portal in GWT for insurance agencies to manage claims, and contributed React components as the frontend modernized.</li>
+      <li>Developed and maintained LOB, a Java/Kotlin claims processing system backed by MySQL.</li>
+      <li>Wrote scripts to monitor message processing stats and track critical business workflows.</li>
+      <li>Modernized builds (Ant to Gradle) and source control (SVN to GitLab) for easier team collaboration.</li>
+    </ul>
+
+    <div class="job-header">
+      <span class="job-title">Network Security Analyst (IPv6 SME), Verizon/ICSA Labs</span>
+      <span class="job-dates">2006 to 2010</span>
+    </div>
+    <ul>
+      <li>Authored IPv6 test specifications for the U.S. Government NIST USGv6 program and designed ICSA's internal IPv6 testing program, including evaluation tools.</li>
+      <li>Tested network protection devices, worked with vendors to resolve violations, and published findings publicly.</li>
+    </ul>
+
+    <blockquote>Earlier roles include network engineering, security, and wireless systems for high-profile projects, including supporting press coverage during U.S. Presidential campaigns; details available upon request.</blockquote>
+
+    <h2>Education</h2>
+    <p><strong>Temple University</strong>, Philadelphia, PA &nbsp;·&nbsp; 2010–2015 &nbsp;·&nbsp; B.S. Electrical Engineering (Bio-Electrical Concentration)</p>
+  </body>
+</html>

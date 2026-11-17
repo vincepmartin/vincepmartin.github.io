@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Final Atomic Buster: Vincent Martin</title>
+
+  <link rel="stylesheet" type="text/css" href="neat.css" />
+  <script src="./components.js" defer></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  <site-header title="Vincent Martin" subtitle="Bicycles, Coffee and Free Software"></site-header>
+  <site-menu active="resume"></site-menu>
+  <div class="breathe"></div>
+  <main>
+    <h2>Vincent Martin</h2>
+    <p class="tagline">Software Architect located in San Francisco, CA</p>
+    <a href="mailto:hirevince@finalatomicbuster.net">hirevince@finalatomicbuster.net</a>
+    - <a href="./vince_martin_resume_latest.pdf">Download PDF</a>
+
+    <h2>Summary</h2>
+    <p>Software architect and technical lead for public-health surveillance platforms built on EpiTrax, an open-source, GNU-licensed system used by state governments in regulated environments. Hands-on from Java and React through deployment, with a computer security and networking background, and a habit of mentoring and teaching across the team.</p>
+
+    <h2>Skills</h2>
+    <p><strong>Languages:</strong> Java, Kotlin, TypeScript/JavaScript, Python, PHP, SQL</p>
+    <p><strong>Backend:</strong> Quarkus, Jakarta EE, Spring Boot, Express.js</p>
+    <p><strong>Frontend:</strong> React, Vite, Tailwind CSS, Material UI, HTML/CSS</p>
+    <p><strong>Data and integration:</strong> PostgreSQL, Flyway, BridgeLink (HL7/FHIR), BigQuery, Apache Superset</p>
+    <p><strong>AI development:</strong> Agent orchestration, skill creation, legacy modernization (Claude Code, OpenCode)</p>
+    <p><strong>Deployment and operations:</strong> Docker, AWS (ECS, Fargate), S3-compatible storage, Kubernetes (kubectl, Kustomize), GitHub Actions, Linux, networking (IPv6)</p>
+
+    <h2>Experience</h2>
+    <p><strong>Software Architect: Deloitte (Formerly End Point Dev)</strong>, April 2023 to Present</p>
+    <ul>
+      <li>Lead application architect for the California Department of Public Health (CDPH) Future Disease Surveillance System (FDSS), a large contract the team won to replace CalREDIE with EpiTrax, and for platforms in other states. Own the technical roadmap and security improvements.</li>
+      <li>Review and merge code across multiple state public-health engagements. On the FDSS project, a multi-million-dollar contract, directly lead 3 onshore engineers and set design and implementation direction for an offshore team of about 8, owning each sprint's delivery. Contribute technical work toward having Deloitte's EpiTrax fork, which adds significant features beyond the community version, adopted as the consortium's version (in progress). Mentor junior engineers in weekly one-on-ones.</li>
+      <li>Originated and led a genomics platform for outbreak investigation after a third-party vendor's collapse left a state public health client without a solution: proposed that Deloitte build it, estimated the effort and cost, wrote the technical response, and won a roughly $1.3M contract. The platform combines EpiTrax genomic data with public NCBI data in BigQuery and Apache Superset, with a custom phylogenetic tree component (React/TypeScript, Quarkus) and a sandbox I designed for running client-supplied Python reporting jobs, with network access restricted to a single S3 bucket, prototyped with Docker and S3-compatible storage.</li>
+      <li>Architect and build a stateless Quarkus/React re-architecture of a legacy stateful monolith so capacity scales horizontally by adding identical container instances. Load tests on identical hardware showed 84x read throughput, 87x lower latency, 2-3x less memory, and 95% fewer database round-trips. </li>
+      <li>Designed and built a multi-agent AI development workflow (OpenCode with Claude, custom agents and skills) that moves each change through plan, implement, review, and audit stages. Guardrails include least-privilege permissions, human approval before writes, data-fidelity audits against legacy behavior, and mutation testing, so AI-generated code is verified instead of trusted.</li>
+      <li>Stay hands-on with state clients: build features and fixes across EpiTrax and supporting Java and PHP applications, set up BridgeLink for HL7/FHIR message routing, and containerize applications for the move from self-managed VMs to ECS on Fargate.</li>
+    </ul>
+
+    <p><strong><a href="https://bikehopper.org">BikeHopper</a></strong> (Volunteer, Open Source Contributor), August
+      2022 to Present</p>
+    <ul>
+      <li>Contribute to an open-source bike-routing app, including Garmin .fit route export for cycling computers and a
+        Tailwind CSS 3 to 4 upgrade.</li>
+    </ul>
+
+    <p><strong>Senior Software Engineer: Tekmetric</strong>, June 2021 to August 2022</p>
+    <ul>
+      <li>Developed frontend features in React with Material UI for a heavily used SaaS application, contributed to a
+        Spring Boot backend, gave peer code reviews, and modernized legacy code (Tailwind migration, class components to
+        hooks).</li>
+    </ul>
+
+    <p><strong>Senior Software Engineer: FedNat</strong>, July 2015 to May 2021</p>
+    <ul>
+      <li>Built and maintained an agent portal in GWT for insurance agencies to manage claims, and contributed React
+        components as the frontend modernized.</li>
+      <li>Developed and maintained LOB, a Java/Kotlin claims processing system backed by MySQL.</li>
+      <li>Wrote scripts to monitor message processing stats and track critical business workflows.</li>
+      <li>Modernized builds (Ant to Gradle) and source control (SVN to GitLab) for easier team collaboration.</li>
+    </ul>
+
+    <p><strong>Network Security Analyst (IPv6 SME): Verizon/ICSA Labs</strong>, 2006 to 2010</p>
+    <ul>
+      <li>Authored IPv6 test specifications for the U.S. Government NIST USGv6 program and designed ICSA's internal IPv6
+        testing program, including evaluation tools.</li>
+      <li>Tested network protection devices, worked with vendors to resolve violations, and published findings publicly.
+      </li>
+    </ul>
+
+    <blockquote><em>Earlier roles include network engineering, security, and wireless systems for high-profile projects,
+        including supporting press coverage during U.S. Presidential campaigns; details available upon request.</em>
+    </blockquote>
+
+    <h3>Education</h3>
+
+    <p>
+      <strong>Temple University</strong>, Philadelphia, PA, 2010–2015, B.S.
+      Electrical Engineering (Bio-Electrical Concentration)
+    </p>
+  </main>
+
+  <footer>
+    <p>References and detailed employment history available upon request.</p>
+  </footer>
+</body>
+
+</html>
